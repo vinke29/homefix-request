@@ -141,7 +141,7 @@
         /* Illustration */
         .illustration {
             margin-top: auto;
-            height: 380px;
+            height: 460px;
             flex-shrink: 0;
             overflow: hidden;
             position: relative;
@@ -154,8 +154,8 @@
             width: 115%;
             display: block;
             mix-blend-mode: multiply;
-            -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%);
-            mask-image: linear-gradient(to top, transparent 0%, black 30%);
+            -webkit-mask-image: linear-gradient(to top, transparent 0%, black 28%);
+            mask-image: linear-gradient(to top, transparent 0%, black 28%);
         }
 
         /* ═══════════════════════════
@@ -182,12 +182,14 @@
             letter-spacing: -0.8px;
             margin-bottom: 0.4rem;
             color: var(--text);
+            display: none; /* left panel already provides context on desktop */
         }
 
         .form-intro {
             font-size: 0.9rem;
             color: var(--text-muted);
             margin-bottom: 2.25rem;
+            display: none;
         }
 
         .field {
@@ -481,6 +483,11 @@
 
             .form-wrap {
                 max-width: 100%;
+            }
+
+            .form-view h2,
+            .form-intro {
+                display: block;
             }
         }
 
