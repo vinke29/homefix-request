@@ -62,13 +62,13 @@
 
         /* ── Hero ── */
         .hero {
-            min-height: calc(100vh - 80px);
             display: flex;
             align-items: center;
-            padding: 2rem 3rem 0;
+            padding: 4rem 3rem 0;
             gap: 2rem;
             max-width: 1300px;
             margin: 0 auto;
+            min-height: calc(100vh - 88px);
         }
 
         .hero-content {
@@ -150,20 +150,19 @@
 
         /* ── Illustration ── */
         .hero-illustration {
-            flex: 0 0 48%;
+            flex: 0 0 52%;
+            align-self: flex-end;
             display: flex;
             align-items: flex-end;
-            justify-content: center;
-            align-self: flex-end;
-            max-width: 560px;
+            justify-content: flex-end;
         }
 
         .hero-illustration img {
-            width: 100%;
+            width: 90%;
             display: block;
             mix-blend-mode: multiply;
-            -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%);
-            mask-image: linear-gradient(to top, transparent 0%, black 20%);
+            -webkit-mask-image: linear-gradient(to top, transparent 0%, black 18%);
+            mask-image: linear-gradient(to top, transparent 0%, black 18%);
         }
 
         /* ═══════════════════════════
