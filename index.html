@@ -102,25 +102,61 @@
             margin-bottom: 2.25rem;
         }
 
-        .trust-pills {
+        /* Services row */
+        .services-row {
             display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-            margin-bottom: 2.75rem;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.2rem 0;
+            margin-bottom: 2.5rem;
+            font-size: 0.875rem;
+            color: var(--text-mid);
+        }
+
+        .services-row .sep {
+            margin: 0 0.4rem;
+            color: #ccc;
+        }
+
+        /* Bottom trust cluster */
+        .bottom-trust {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            color: var(--text-mid);
+            font-weight: 500;
+        }
+
+        .stars { color: #f59e0b; letter-spacing: 0px; font-size: 0.78rem; }
+
+        .trust-sep {
+            width: 1px;
+            height: 14px;
+            background: var(--border);
+            flex-shrink: 0;
         }
 
         .trust-pill {
             display: flex;
             align-items: center;
-            gap: 0.6rem;
-            font-size: 0.88rem;
+            gap: 0.45rem;
+            font-size: 0.82rem;
             color: var(--text-mid);
             font-weight: 500;
         }
 
         .trust-pill .dot {
-            width: 6px;
-            height: 6px;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
             background: var(--accent);
             flex-shrink: 0;
@@ -478,18 +514,33 @@
         <div class="hero-content">
             <p class="eyebrow">Home repair, on demand</p>
             <h1>Got a problem<br>at home?</h1>
-            <p class="sub">Tell us what's going on. A local pro will review your request and reach out in under an hour.</p>
+            <p class="sub">Describe the issue and get a licensed local pro at your door — fast. No waiting, no overpriced quotes.</p>
 
-            <div class="trust-pills">
-                <div class="trust-pill"><span class="dot"></span>Under 1 hour response</div>
-                <div class="trust-pill"><span class="dot"></span>Licensed &amp; insured pros</div>
-                <div class="trust-pill"><span class="dot"></span>No commitment to request</div>
+            <div class="services-row">
+                Plumbing <span class="sep">·</span>
+                Electrical <span class="sep">·</span>
+                Drywall <span class="sep">·</span>
+                Gutters <span class="sep">·</span>
+                Carpentry <span class="sep">·</span>
+                Painting <span class="sep">·</span>
+                <span style="color:var(--accent);font-weight:600">+ more</span>
             </div>
 
             <button class="btn-cta" id="openModal">
-                Get help now
+                Get a free estimate
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </button>
+
+            <div class="bottom-trust">
+                <div class="social-proof">
+                    <span class="stars">★★★★★</span>
+                    <span>4.8 · 200+ jobs completed</span>
+                </div>
+                <div class="trust-sep"></div>
+                <div class="trust-pill"><span class="dot"></span>Licensed &amp; insured</div>
+                <div class="trust-sep"></div>
+                <div class="trust-pill"><span class="dot"></span>No commitment</div>
+            </div>
         </div>
 
         <div class="hero-illustration">
