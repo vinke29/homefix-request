@@ -150,15 +150,18 @@
 
         /* ── Illustration ── */
         .hero-illustration {
-            flex: 0 0 52%;
-            align-self: flex-end;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
+            flex: 0 0 50%;
+            align-self: stretch;
+            overflow: hidden;
+            position: relative;
         }
 
         .hero-illustration img {
-            width: 90%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 92%;
+            width: auto;
             display: block;
             mix-blend-mode: multiply;
             -webkit-mask-image: linear-gradient(to top, transparent 0%, black 18%);
