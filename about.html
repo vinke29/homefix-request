@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who We Are — HomeFix</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --cream: #f4f2ee;
@@ -47,22 +43,6 @@
 
         .brand span { color: var(--accent); }
 
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .nav-link {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-mid);
-            text-decoration: none;
-            transition: color 0.15s;
-        }
-
-        .nav-link:hover { color: var(--text); }
-
         .btn-nav {
             background: var(--accent);
             color: #fff;
@@ -79,8 +59,7 @@
         /* ── Hero ── */
         .hero {
             background: var(--cream);
-            padding: 6rem 3rem 5rem;
-            text-align: center;
+            padding: 5rem 3rem 4rem;
             border-bottom: 1px solid var(--border);
         }
 
@@ -94,127 +73,70 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.75rem;
             font-weight: 800;
             letter-spacing: -2.5px;
             line-height: 1.05;
-            max-width: 700px;
-            margin: 0 auto 1.5rem;
+            max-width: 600px;
+            margin-bottom: 1.25rem;
         }
 
         .hero p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--text-mid);
-            max-width: 540px;
-            margin: 0 auto;
+            max-width: 500px;
             line-height: 1.7;
         }
 
-        /* ── Content ── */
+        /* ── Founders ── */
         .content {
             max-width: 720px;
             margin: 0 auto;
             padding: 5rem 2rem;
         }
 
-        .section {
-            margin-bottom: 4rem;
-        }
-
-        .section h2 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            letter-spacing: -0.8px;
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
-
-        .section p {
-            font-size: 1.05rem;
-            line-height: 1.75;
-            color: var(--text-mid);
-            margin-bottom: 1rem;
-        }
-
-        .section p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* ── Values ── */
-        .values {
+        .founders {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 2.5rem;
+            margin-bottom: 5rem;
         }
 
-        .value-card {
-            background: var(--cream);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.75rem;
-        }
-
-        .value-card .icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .value-card h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.3px;
-        }
-
-        .value-card p {
-            font-size: 0.9rem;
-            color: var(--text-mid);
-            line-height: 1.6;
-        }
-
-        /* ── Team ── */
-        .team {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .team-card {
-            text-align: center;
-        }
-
-        .avatar {
-            width: 72px;
-            height: 72px;
+        .founder-initial {
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
             background: var(--cream);
-            border: 2px solid var(--border);
-            margin: 0 auto 0.75rem;
+            border: 1.5px solid var(--border);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            color: var(--text-muted);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
         }
 
-        .team-card .name {
-            font-size: 0.95rem;
-            font-weight: 600;
+        .founder-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.4px;
             margin-bottom: 0.2rem;
         }
 
-        .team-card .role {
+        .founder-role {
             font-size: 0.8rem;
-            color: var(--text-muted);
+            font-weight: 500;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
         }
 
-        /* ── Divider ── */
-        .divider {
-            border: none;
-            border-top: 1px solid var(--border);
-            margin: 4rem 0;
+        .founder p {
+            font-size: 0.975rem;
+            line-height: 1.75;
+            color: var(--text-mid);
         }
 
         /* ── CTA ── */
@@ -222,21 +144,21 @@
             background: var(--cream);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 3rem;
+            padding: 2.5rem;
             text-align: center;
         }
 
         .cta-block h2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 0.75rem;
+            letter-spacing: -0.8px;
+            margin-bottom: 0.6rem;
         }
 
         .cta-block p {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--text-mid);
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.5rem;
         }
 
         .btn-cta {
@@ -265,11 +187,10 @@
         /* ── Mobile ── */
         @media (max-width: 640px) {
             nav { padding: 1.5rem 1.25rem; }
-            .hero { padding: 4rem 1.25rem 3rem; }
-            .hero h1 { font-size: 2.75rem; letter-spacing: -1.5px; }
+            .hero { padding: 3.5rem 1.25rem 3rem; }
+            .hero h1 { font-size: 2.5rem; letter-spacing: -1.5px; }
             .content { padding: 3rem 1.25rem; }
-            .values { grid-template-columns: 1fr; }
-            .team { grid-template-columns: 1fr 1fr; }
+            .founders { grid-template-columns: 1fr; gap: 2rem; }
         }
     </style>
 </head>
@@ -277,98 +198,42 @@
 
     <nav>
         <a href="index.html" class="brand">Home<span>Fix</span></a>
-        <div class="nav-right">
-            <a href="about.html" class="nav-link">Who we are</a>
-            <a href="index.html" class="btn-nav">Get help now</a>
-        </div>
+        <a href="index.html#request" class="btn-nav">Get help now</a>
     </nav>
 
     <div class="hero">
-        <p class="eyebrow">Our story</p>
-        <h1>Built for homeowners who need help fast</h1>
-        <p>We started HomeFix because getting a reliable handyman shouldn't feel like a second job. Fast, trusted, local.</p>
+        <p class="eyebrow">Who we are</p>
+        <h1>Just two guys who hate a bad repair job.</h1>
+        <p>We've spent years in construction and home services. We know what good work looks like — and we got tired of watching homeowners settle for less.</p>
     </div>
 
     <div class="content">
 
-        <div class="section">
-            <h2>Who we are</h2>
-            <p>HomeFix is a team of [X] based in [City]. We connect homeowners with vetted, local pros who show up when they say they will — no runaround, no waiting a week for a callback.</p>
-            <p>We started this because we kept hearing the same story: something breaks, you call around, nobody picks up, or they quote you an outrageous price. We built the service we wished existed.</p>
-        </div>
-
-        <hr class="divider">
-
-        <div class="section">
-            <h2>How it works</h2>
-            <p>You send us the issue — a quick description and a photo if you have one. We review it and reach out within the hour with a pro and a fair quote. You say yes, we get it done.</p>
-            <p>No subscriptions, no upfront fees. You only pay when the job's complete and you're happy with it.</p>
-        </div>
-
-        <hr class="divider">
-
-        <div class="section">
-            <h2>What we stand for</h2>
-            <div class="values">
-                <div class="value-card">
-                    <div class="icon">⚡</div>
-                    <h3>Speed</h3>
-                    <p>Every request gets a response in under an hour. We don't believe in making you wait.</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">🔒</div>
-                    <h3>Trust</h3>
-                    <p>Every pro is vetted, licensed, and insured. We stand behind the work they do.</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">💬</div>
-                    <h3>Transparency</h3>
-                    <p>Upfront pricing, no hidden fees. You know the cost before anyone shows up.</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">🏡</div>
-                    <h3>Local</h3>
-                    <p>We work with pros from your area — people who know the neighborhood and care about their reputation.</p>
-                </div>
+        <div class="founders">
+            <div class="founder">
+                <div class="founder-initial">I</div>
+                <div class="founder-name">Ignacio</div>
+                <div class="founder-role">Co-founder</div>
+                <p>Ignacio spent over a decade managing residential construction projects across the Southeast. He's overseen hundreds of jobs — from simple drywall patches to full kitchen gut-outs — and knows every way a repair can go sideways. He moved to Raleigh in 2019 and started HomeFix after waiting three weeks for a plumber to call him back.</p>
+            </div>
+            <div class="founder">
+                <div class="founder-initial">A</div>
+                <div class="founder-name">Alejandro</div>
+                <div class="founder-role">Co-founder</div>
+                <p>Alejandro ran field operations for a property management firm in Charlotte, coordinating repair crews across thousands of units. He built the playbook HomeFix runs on: fast response, vetted pros, no excuses. If there's a problem at your home, he's the reason someone shows up on time.</p>
             </div>
         </div>
-
-        <hr class="divider">
-
-        <div class="section">
-            <h2>The team</h2>
-            <p>A small team with a big commitment to making home repair less painful.</p>
-            <div class="team">
-                <div class="team-card">
-                    <div class="avatar">👤</div>
-                    <div class="name">[Founder Name]</div>
-                    <div class="role">Co-founder &amp; CEO</div>
-                </div>
-                <div class="team-card">
-                    <div class="avatar">👤</div>
-                    <div class="name">[Co-founder Name]</div>
-                    <div class="role">Co-founder &amp; Ops</div>
-                </div>
-                <div class="team-card">
-                    <div class="avatar">👤</div>
-                    <div class="name">[Name]</div>
-                    <div class="role">Head of Pro Network</div>
-                </div>
-            </div>
-        </div>
-
-        <hr class="divider">
 
         <div class="cta-block">
-            <h2>Got something that needs fixing?</h2>
-            <p>Send us the details and we'll have someone on it in under an hour.</p>
-            <a href="index.html" class="btn-cta">Get help now</a>
+            <h2>Something needs fixing?</h2>
+            <p>Send us the details. We'll handle the rest.</p>
+            <a href="index.html#request" class="btn-cta">Get help now</a>
         </div>
 
     </div>
 
     <footer>
-        &copy; 2025 HomeFix. All rights reserved.
+        &copy; 2025 HomeFix. Durham · Raleigh · Chapel Hill
     </footer>
 
 </body>

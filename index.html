@@ -464,17 +464,7 @@
                 letter-spacing: -2px;
             }
 
-            .hero-illustration {
-                flex: none;
-                width: 100%;
-                max-width: 100%;
-                justify-content: flex-end;
-            }
-
-            .hero-illustration img {
-                width: 70%;
-                max-width: 280px;
-            }
+            .hero-illustration { display: none; }
 
             .modal-card {
                 padding: 2rem 1.5rem;
@@ -500,6 +490,30 @@
         @media (max-width: 480px) {
             .hero-content h1 { font-size: 2.5rem; }
             .row { grid-template-columns: 1fr; }
+        }
+
+        /* ── Mobile illustration strip ── */
+        .mobile-strip { display: none; }
+
+        @media (max-width: 820px) {
+            .mobile-strip {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                width: 100%;
+                overflow: hidden;
+                padding-top: 0.5rem;
+            }
+
+            .mobile-strip img {
+                width: 82%;
+                max-width: 380px;
+                height: auto;
+                display: block;
+                mix-blend-mode: multiply;
+                -webkit-mask-image: linear-gradient(to top, transparent 0%, black 22%);
+                mask-image: linear-gradient(to top, transparent 0%, black 22%);
+            }
         }
     </style>
 </head>
@@ -546,6 +560,11 @@
         <div class="hero-illustration">
             <img src="pro-illustration.jpg" alt="HomeFix pro on the way">
         </div>
+    </div>
+
+    <!-- Mobile illustration (hidden on desktop) -->
+    <div class="mobile-strip">
+        <img src="pro-illustration.jpg" alt="HomeFix pro on the way">
     </div>
 
     <!-- Modal -->
@@ -633,6 +652,7 @@
 
         // ── Modal open / close ──
         openBtn.addEventListener('click', () => overlay.classList.add('open'));
+        if (window.location.hash === '#request') overlay.classList.add('open');
         closeBtn.addEventListener('click', closeModal);
         overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
